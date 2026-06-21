@@ -204,23 +204,29 @@ body {
 
 .card-meta { flex: 1; min-width: 0; }
 
+/* card-title-row: sigla + nome na mesma linha */
+.card-title-row {
+  display: flex; align-items: center; gap: 5px; flex-wrap: wrap;
+}
+
 .card-sigla {
-  display: inline-block; font-size: 9px; font-weight: 800;
+  display: inline-flex; align-items: center;
+  font-size: 9px; font-weight: 800;
   letter-spacing: .08em; padding: 2px 6px; border-radius: 4px;
-  margin-bottom: 2px; text-transform: uppercase;
+  text-transform: uppercase; flex-shrink: 0; white-space: nowrap;
 }
 
 .card-name {
   font-size: 12.5px; font-weight: 600; color: var(--text); line-height: 1.35;
   border-radius: 3px; padding: 1px 3px; margin: 0 -3px;
-  word-break: break-word; outline: none;
+  word-break: break-word; outline: none; flex: 1; min-width: 60px;
   transition: background .1s;
 }
-.card-name:hover { background: #f5f5f5; }
-.card-name:focus { background: #f0f0f0; }
+.card-name[contenteditable="true"]:hover { background: #f5f5f5; }
+.card-name[contenteditable="true"]:focus { background: #f0f0f0; }
 
 .card-avatars {
-  display: flex; gap: 2px; margin-top: 5px; flex-wrap: wrap;
+  display: flex; gap: 2px; margin-top: 4px; flex-wrap: wrap;
 }
 .avatar {
   width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0;
@@ -270,11 +276,25 @@ body {
 }
 .cell-add-check {
   display: flex; align-items: center; gap: 4px;
-  padding: 1px 0; cursor: pointer; opacity: 0; transition: opacity .12s;
+  padding: 2px 0; cursor: pointer; opacity: 0; transition: opacity .12s;
   font-size: 11px; color: #c0c0c0; user-select: none;
 }
 .cell-add-check:hover { color: var(--accent); }
 td:hover .cell-add-check, td:focus-within .cell-add-check { opacity: 1; }
+
+/* Tabela: botões de add linha/coluna */
+.tbl-actions {
+  display: flex; gap: 4px; margin-top: 4px;
+}
+.tbl-btn {
+  font-size: 10.5px; color: #aaa; background: none;
+  border: 1px solid #e2e2e2; border-radius: 4px;
+  padding: 2px 7px; cursor: pointer; font-family: inherit;
+  transition: all .1s; line-height: 1.6;
+}
+.tbl-btn:hover {
+  color: var(--accent); border-color: var(--accent); background: var(--accent-bg);
+}
 
 /* Card footer */
 .card-footer {
