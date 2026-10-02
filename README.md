@@ -63,6 +63,13 @@ Depois no GitHub: **Settings → Pages → Source: main branch / root**
 
 URL final: `https://SEU_USUARIO.github.io/polvo-v5`
 
+### 5. Instalar no celular (ícone na tela inicial)
+
+O Polvo abre como um app: ícone próprio na tela inicial e tela cheia, sem a barra do navegador.
+
+- **Android (Chrome):** abra a URL → menu **⋮** → **Instalar app** (ou **Adicionar à tela inicial**)
+- **iPhone (Safari):** abra a URL → botão **Compartilhar** (quadrado com seta) → **Adicionar à Tela de Início**
+
 ---
 
 ## Como usar
